@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    transition: all .5s ease-in-out;   
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.template{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    .toDoList{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    .item-add-wrapper{
+        margin-top: 100px;
+        display: grid;
+        place-items: center;
+        width: 80%;
+        .item-add{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            height: 100%;
+                input{
+                    padding: 0 20px;
+                    height: 80px;
+                    width: 60%;
+                    font-size: 30px;
+                }
+                button{
+                    height: 100%;
+                    width: 15%;
+                    background-color: lightblue;
+                }
+        }
+    }
+}

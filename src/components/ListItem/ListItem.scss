@@ -1,0 +1,36 @@
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    min-width: 1000px;
+    margin: 5px 0;
+    padding: 0 20px;
+    label{
+        font-size: 25px;
+        margin: 10px 0;
+        padding: 10px;
+        // text-decoration: line-through;
+    }
+    input[type="checkbox"]{
+        background-color: aqua;
+        width: 30px;
+
+        &:checked{
+            width: 50px;
+        }
+        &:checked + .list-item.label{
+            //Not working
+            color: red;
+            text-decoration: line-through;
+        }
+    }
+    span{
+        display: grid;
+        place-content: center;
+        padding: 0 10px;
+        background-color: aqua;
+        border: 1px transparent solid;
+        border-radius: 15px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
