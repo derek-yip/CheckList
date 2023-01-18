@@ -9,7 +9,7 @@
     <form class="toDoList">
       <ul class="list-item-wrapper">
         <div v-for="listItem in ToDoItems" :key=listItem.id>
-          <ListItem :id=listItem.id :label=listItem.label :done=listItem.done v-on:RemoveItem="UpdatedList($event)" />
+          <ListItem :id=listItem.id :label=listItem.label :done=listItem.done v-on:RemoveItem="UpdatedList($event)" v-on:ChangeChecked="ChangeChecked($event)"/>
         </div>
       </ul>
     </form>

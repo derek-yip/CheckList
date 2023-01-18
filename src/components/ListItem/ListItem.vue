@@ -2,7 +2,7 @@
 <template>
   <li class="list-item" >
     <label class="list-item-text" :style="[done?{'color':'blue','text-decoration':'line-through'}:'']">{{label}}</label>
-    <input type="checkbox" name="item" class="list-item-checkbox" v-model=done />
+    <input type="checkbox" name="item" class="list-item-checkbox" v-model=done @click="ChangeChecked" :targetAdjustCheckID=id />
     <button type="button" class="item-remove" @click="RemoveItem" :targetRemoveID=id >Remove</button>
   </li>
 </template>

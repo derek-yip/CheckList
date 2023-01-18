@@ -44,8 +44,15 @@ import ListItem from './ListItem/ListItem.vue'
             return Math.floor(Math.random() * Date.now());
         }
       },
-      UpdatedList(updatedValue){
-        this.ToDoItems = this.ToDoItems.filter(item => item.id !== updatedValue);;
+      UpdatedList(updatedValue:number){
+        this.ToDoItems = this.ToDoItems.filter(item => item.id !== updatedValue);
+      },
+      ChangeChecked(checkedValue:number){
+        console.log(checkedValue);
+        
+        let targetIndex:number = this.ToDoItems.indexOf(this.ToDoItems.filter(item => item.id == checkedValue)) ;
+        console.log(targetIndex);
+        
       }
     },
     components:{
