@@ -45,14 +45,14 @@ import ListItem from './ListItem/ListItem.vue'
         }
       },
       UpdatedList(updatedValue:number){
-        this.ToDoItems = this.ToDoItems.filter(item => item.id !== updatedValue);
+        let self:any = this;          
+        self.ToDoItems = self.ToDoItems.filter(item => item.id !== updatedValue);
       },
       ChangeChecked(checkedValue:number){
-        console.log(checkedValue);
-        
-        let targetIndex:number = this.ToDoItems.indexOf(this.ToDoItems.filter(item => item.id == checkedValue)) ;
-        console.log(targetIndex);
-        
+        let self:any = this;
+        let targetObject: any = self.ToDoItems.filter(item => item.id == checkedValue)[0]                      
+        let targetIndex:number = self.ToDoItems.indexOf(targetObject) ;
+        self.ToDoItems[targetIndex].done = !self.ToDoItems[targetIndex].done
       }
     },
     components:{

@@ -10,13 +10,15 @@ export default {
         }
     },
     methods:{
-      RemoveItem(DOMelement:any){          
+      RemoveItem(DOMelement:any){
+          let self:any = this;          
           let targetRemoveID:number = parseInt(DOMelement.target.getAttribute('targetremoveid'));
-          let NewToDoItems:any = this.$emit('RemoveItem', targetRemoveID);
+          let NewToDoItems:any = self.$emit('RemoveItem', targetRemoveID);
       },
       ChangeChecked(DOMelement:any){
-        let targetAdjustCheckID:number = parseInt(DOMelement.target.getAttribute('targetremoveid'));
-        let NewToDoItems:any = this.$emit('ChangeChecked', targetAdjustCheckID);
+        let self:any = this;          
+        let targetAdjustCheckID:number = parseInt(DOMelement.target.getAttribute('targetAdjustCheckID'));
+        let NewToDoItems:any = self.$emit('ChangeChecked', targetAdjustCheckID);
       }
   },
 }
