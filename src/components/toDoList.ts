@@ -1,7 +1,7 @@
 import ListItem from './ListItem/ListItem.vue'
 
   export default {
-    name:'TodoList',
+    name:'checkList',
     data() {
       return {
         ToDoItems: [
